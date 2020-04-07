@@ -13,3 +13,4 @@ CREATE TABLE message (
     PRIMARY KEY(message_id)
 );
 
+---

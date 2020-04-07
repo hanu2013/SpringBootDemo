@@ -16,15 +16,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class SpringBootDemoApplication implements ApplicationRunner{
 
-//	@Autowired
-//	@Qualifier("member")
-//	private NamedParameterJdbcTemplate memberJdbcTemplate;
-
-//	@Qualifier("memberSrc")
-//	@Autowired
-//	private DataSource memberDataSource;
-	
-	
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoApplication.class, args);
