@@ -57,6 +57,7 @@ public class MessageController {
 		return ResponseEntity.ok(message);
 	}
 
+	
 	class MessageNotFoundException extends RuntimeException {
 
 		MessageNotFoundException(String errorMessage) {
