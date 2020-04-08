@@ -13,7 +13,7 @@ import com.example.models.Message;
 public class MysqlDataService {
 
   @Autowired
-  @Qualifier("mysqlJdbcTemplate")
+  @Qualifier("db1JdbcTemplate")
   private NamedParameterJdbcTemplate jdbcTemplate;
 
   public int saveMessage(Message message) {

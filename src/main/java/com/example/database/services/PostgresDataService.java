@@ -13,7 +13,7 @@ import com.example.models.Message;
 public class PostgresDataService {
 
   @Autowired
-  @Qualifier("postgresJdbcTemplate")
+  @Qualifier("db2JdbcTemplate")
   private NamedParameterJdbcTemplate jdbcTemplate;
 
   public int saveMessage(Message message) {
@@ -24,7 +24,7 @@ public class PostgresDataService {
     parameters.put("text", message.getText());
     parameters.put("datetime", message.getDateTime());
     return jdbcTemplate.update(query, parameters);
-
+//	  return 1;
   }
 
   public Message getMessage(String messageId) {
@@ -36,5 +36,6 @@ public class PostgresDataService {
         (rs, rowNum) -> new Message(rs.getString("message_id"),
             rs.getString("text"),
             rs.getTimestamp("datetime").toLocalDateTime()));
+//	  return null;
   }
 }
